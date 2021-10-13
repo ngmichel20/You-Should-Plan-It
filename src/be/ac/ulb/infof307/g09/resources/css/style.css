@@ -1,0 +1,11 @@
+.root {
+    -fx-padding: 25px;
+}
+
+.text-field {
+    -fx-min-width: 200px;
+}
+
+.label {
+    -fx-font: 14 "Avenir Next";
+}
