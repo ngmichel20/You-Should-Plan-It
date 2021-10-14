@@ -1,0 +1,12 @@
+be.ac.ulb.infof307.g09
+be.ac.ulb.infof307.g09.application.controllers.collaborator
+be.ac.ulb.infof307.g09.application.controllers.project
+be.ac.ulb.infof307.g09.application.controllers.user
+be.ac.ulb.infof307.g09.application.models
+be.ac.ulb.infof307.g09.application.models.handlers
+be.ac.ulb.infof307.g09.application.utilities
+be.ac.ulb.infof307.g09.application.view.controllers.collaborator
+be.ac.ulb.infof307.g09.application.view.controllers.project
+be.ac.ulb.infof307.g09.application.view.controllers.user
+be.ac.ulb.infof307.g09.database
+be.ac.ulb.infof307.g09.exceptions

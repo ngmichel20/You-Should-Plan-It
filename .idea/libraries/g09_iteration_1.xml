@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="g09-iteration-1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/iteration1/g09-iteration-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

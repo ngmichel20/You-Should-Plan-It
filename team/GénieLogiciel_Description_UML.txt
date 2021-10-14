@@ -1,0 +1,47 @@
+-----------------Project : Un projet que l'utilisateur aura crée -------------------
+
+Id 			        NN,PK,AI,U	                (INTEGER)		: id du projet
+Title 				NN		                    (TEXT)		    : titre du projet
+Description 		NN		                    (TEXT)		    : description du projet
+StartDate 			NN		                    (INTEGER)		: date de début du projet
+EndDate 			NN		                    (INTEGER)		: date de fin du projet
+InitialDuration     NN                          (INTEGER)       : durée initiale du projet
+Author 				NN,FK: User(Username)		(TEXT)		    : auteur du projet
+ParentProject	    FK: Project(Id)		        (INTEGER)		: projet parent du projet
+Color    			NN		                    (INTEGER)		: couleur du projet
+-----------------User : Un utilisateur ----------------------------------------------------
+
+Id 					NN,PK,AI,U	(INTEGER)	: id du user
+Username 			NN,U		(TEXT)		: username de l'utilisateur (id secondaire)
+Email 				NN,U		(TEXT)		: email de l'utilisateur
+LastName 			NN		    (TEXT)		: nom de l'utilisateur
+FirstName 			NN		    (TEXT)		: prénom de l'utilisateur
+Password 			NN		    (TEXT)		: mot de passe de l'utilisateur
+
+-----------------Tag : Une étiquette qui peut être crée dans un projet -------------------
+
+Id 				    NN,PK,AI,U	(INTEGER)	: id du tag
+Description 	    NN,U		(TEXT)		: description du tag
+
+-----------------ProjectTag : Table qui lie les Tags avec un projet ------------------------
+
+ProjectId 			NN,PK,FK: Project(Id)  	(INTEGER)		: id du projet
+TagId 				NN,PK,FK: Tag(Id)		(INTEGER)		: id du tag
+
+-----------------Task : Les tâches liées à un projet ---------------------------------------
+
+Id 				    NN,PK,AI,U              	(INTEGER)		: id de la tâche
+Description 		NN	    		            (TEXT)		    : description de la tâche
+StartDate 			NN        		            (INTEGER)		: date de début de la tâche
+EndDate 			NN		                    (INTEGER)		: date de fin de la tâche
+ProjectId 			NN,FK: Project(Id)      	(INTEGER)		: id du projet
+
+-----------------CollaboratorTask : Table qui associe les tâches aux utilisateurs ---------------------------------------
+UserId 				NN,PK,FK: User(Id)           (INTEGER)		: id de l'utilisateur
+TaskId 				NN,PK,FK: Task(Id)           (INTEGER)		: id de la tâche
+
+-----------------ProjectCollaboration : Table qui gère les collaborations des projets -----------------
+ProjectId 			NN,PK,FK: Project(Id)  	     (INTEGER)		: id du projet
+UserId 				NN,PK,FK: User(Id)           (INTEGER)		: id de l'utilisateur
+Accepted 					                     (INTEGER)		: détermine si l'invitation a été acceptée
+InvitationRead 				                     (INTEGER)		: détermine si l'invitation a été lue
